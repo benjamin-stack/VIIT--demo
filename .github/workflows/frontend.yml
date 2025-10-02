@@ -13,7 +13,7 @@ jobs:
       # Students replace these with their actual values
       DOCKER_USERNAME: "benjaminjosephj"  
       DOCKER_PAT: "dckr_pat_4IcXNRFGo6zMm4M5XzoAHSFinAY" 
-      IMAGE_NAME: "Benjamin/demo"
+      IMAGE_NAME: "benjaminjosephj/demo"
       IMAGE_TAG: "frontend"
 
     steps:
