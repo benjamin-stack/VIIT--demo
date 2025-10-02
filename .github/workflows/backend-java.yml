@@ -10,9 +10,9 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     env:
-      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      IMAGE: docker.io/vakilanv/cpp-aws:backend-java
+      DOCKER_USERNAME: benjaminjosephj
+      DOCKER_PASSWORD: dckr_pat_4IcXNRFGo6zMm4M5XzoAHSFinAY
+      IMAGE: docker.io/benjamin/demo:backend-java
 
     steps:
       - uses: actions/checkout@v3
