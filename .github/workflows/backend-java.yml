@@ -10,8 +10,8 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     env:
-      DOCKER_USERNAME: benjaminjosephj
-      DOCKER_PASSWORD: dckr_pat_4IcXNRFGo6zMm4M5XzoAHSFinAY
+      DOCKER_USERNAME: "benjaminjosephj"
+      DOCKER_PASSWORD: "dckr_pat_4IcXNRFGo6zMm4M5XzoAHSFinAY"
       IMAGE: docker.io/benjamin/demo:backend-java
 
     steps:
