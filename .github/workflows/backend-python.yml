@@ -12,7 +12,7 @@ jobs:
     env:
       DOCKER_USERNAME: "benjaminjosephj"
       DOCKER_PASSWORD: "dckr_pat_4IcXNRFGo6zMm4M5XzoAHSFinAY"
-      IMAGE: "docker.io/benjamin/demo:backend-python"
+      IMAGE: "docker.io/benjaminjosephj/demo:backend-python"
 
     steps:
       - uses: actions/checkout@v3
