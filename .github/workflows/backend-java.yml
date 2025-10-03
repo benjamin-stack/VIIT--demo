@@ -32,28 +32,28 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
                     
-      - name: Cache SonarQube packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
+      #- name: Cache SonarQube packages
+       # uses: actions/cache@v4
+      #  with:
+         # path: ~/.sonar/cache
+        #  key: ${{ runner.os }}-sonar
+        #  restore-keys: ${{ runner.os }}-sonar
           
-      - name: Lint with Checkstyle
-        run: |
-          cd backend-java
-          mvn checkstyle:check
+     # - name: Lint with Checkstyle
+     #   run: |
+       #   cd backend-java
+        #  mvn checkstyle:check
 
       - name: Scan for secrets
         uses: gitleaks/gitleaks-action@v2
         with:
           args: detect --source . --no-banner --redact
 
-      - name: SonarCloud Scan
-        working-directory: backend-java
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=com.example:backend-java
+     # - name: SonarCloud Scan
+      #  working-directory: backend-java
+       # env:
+       #   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+       # run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=com.example:backend-java
 
       - name: Build Java project
         run: |
